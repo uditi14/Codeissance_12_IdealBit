@@ -1,0 +1,53 @@
+<!-- <h1>Register</h1>
+<form action="/register" method="POST">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <button type="submit">Register</button>
+</form>
+<a href="/login">Login</a> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">Fitness App</h1>
+    <p>Name, a website build to create health awareness<br>The website has helped many individuals gain back their health control</p>
+  </div>
+  <div>
+    <form action="/register" class="container" method="POST">
+      <h1 class="formhead" align="center">Sign-UP</h1>
+      <br>
+      <label for="name" id="label" ><b>Username</b></label>
+      <input type="text" placeholder="Enter username" name="name" required>
+
+      <label for="email"  id="label" ><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw" id="label" ><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+  
+      <button type="submit" class="btn">Register</button>
+      <h5 align="center " id="label">already a user.<a  href="/login">LOGIN</a></h5>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>
