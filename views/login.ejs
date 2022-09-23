@@ -1,7 +1,4 @@
 <!-- <h1>Login</h1>
-<% if (messages.error) { %>
-  <%= messages.error %>
-<% } %>
 <form action="/login" method="POST">
   <div>
     <label for="email">Email</label>
@@ -38,11 +35,6 @@
     
         <label for="password" id="label" ><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
-
-        <% if (messages.error) { %>
-          <%= messages.error %> 
-        <% } %>
-    
         <button type="submit" class="btn">Login</button>
         <h5 align="center " id="label">Want to sign up<a  href="/register">SIGN-UP</a></h5>
       </form>
