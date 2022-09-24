@@ -10,35 +10,34 @@
 <body color="#eda75d">
   <div class="bg-img">
     <div class="container">
-        <div class="title">Hey <%= locals.name || "User" %>, kindly enter the details below</div>
+        <div class="title">Hey <%= locals.name || "User" %>, you can update your details here</div>
       <div class="content">
         <form action="/details" method="post" >
             <div class="user-details">
               <div class="input-box">
                 <span class="details">Full Name</span>
-                <input type="text" placeholder="Enter your name" required name="fullname">
+                <input type="text" placeholder="Enter your name" required name="fullname" value=<%=locals.fullname || " "  %> >
               </div>
               <div class="input-box">
                 <span class="details">Age</span>
-                <input type="number" placeholder="Enter your age" required name="age">
+                <input type="number" placeholder="Enter your age" required name="age" value=<%=locals.age || " "  %>>
               </div>
               <div class="input-box">
                 <span class="details">Weight</span>
-                <input type="number" placeholder="Enter your weight" required name="weight">
+                <input type="number" placeholder="Enter your weight" required name="weight" value=<%=locals.weight || " "  %>>
                 
               </div>
               <div class="input-box">
                 <span class="details">Height</span>
-                <input type="number" placeholder="Enter your height" required name="height">
+                <input type="number" placeholder="Enter your height" required name="height" value=<%=locals.height || " "  %>>
               </div>
               <div class="input-box">
                 <span class="details">Target Weight</span>
-                <input type="number" placeholder="Enter your Target Weight" required name="targetWeight">
+                <input type="number" placeholder="Enter your Target Weight" required name="targetWeight" value=<%=locals.targetWeight || " "  %>>
               </div>
               <div class="input-box">
                 <span class="details">BMI</span>
-                <label id="bmi" name = "BMI"></label> Your BMI:</label>
-                <button id="cal">calculate</button>
+                <label id="bmi" name = "BMI"> Your BMI: <%=locals.fullname || " "  %></label>
               </div>
             </div>
             <div class="gender-details">
@@ -62,12 +61,11 @@
               </div>
             </div>
             <div class="button">
-              <input type="submit" value="Register">
-            </div>  
+              <input type="submit" value="Update">
+            </div>
           </form>
       </div>
       </div>
     </div>
-    <script src="js/details.js"></script>
 </body>
 </html>

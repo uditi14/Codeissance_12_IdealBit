@@ -1,0 +1,65 @@
+body{
+
+    display:grid;
+    font-family:verdana;
+    background-color:rgba(210, 238, 233, 0.986);
+    margin: 0;
+}
+
+
+.container {
+    position: relative;
+    width:100%; /* Maximum width */
+    margin: 0 auto; /* Center it */
+  }
+  
+.container .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+  }
+
+.title{
+    background: white;
+    border-color: rgb(20, 19, 18);
+    border: 5px rgba(8, 6, 32, 0.986) solid;
+    color:rgba(221, 112, 9, 0.986);
+    font-size: 250%;
+    position: relative;
+    font-family: 'Unica One', cursive;
+    left:15%;
+    width:70%;
+    text-align:center;
+    text-decoration-color: rgb(0, 0, 0);
+}
+
+.account{
+    position:relative;
+    left:38%;
+    top:10%;
+}
+
+.inputcalories{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url("https://images.theconversation.com/files/438740/original/file-20211221-27-qlzv07.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop") ;
+    background-size:60%;
+    background-repeat: no-repeat;
+    color:rgb(248, 245, 245);
+    padding:10%;
+    width:170%;
+    margin-left: 0%;
+}
+
+.inputcalories .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+

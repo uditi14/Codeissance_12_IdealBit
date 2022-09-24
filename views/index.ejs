@@ -1,4 +1,227 @@
-<h1>Hi <%= locals.name || 'default' %></h1>
-<!-- <form action="/logout?_method=DELETE" method="POST"> -->
-  <button type="submit">Log Out</button>
-<!-- </form> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/homepage.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROFILE</a>
+    <!-- <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a> -->
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PROFILE</a>
+    <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-light-grey w3-xlarge w3-wide w3-animate-opacity w3-opacity-min" id="mainl">HEALTH FIRST</span>
+  </div>
+</div>
+</div>
+
+<!--CARDS SECTION-->
+<a href="/calc">
+<div class="card">
+    <img src="https://media.istockphoto.com/vectors/calculator-with-apple-and-measuring-tape-vector-id914932994?k=20&m=914932994&s=612x612&w=0&h=ekr3uE0-2_9q3Si0FbpflxfRtrfMJv-viOTjXXwwCMU=" alt="">
+    <div class="con-text">
+        <h2>
+            Track It Down!
+        </h2>
+        <p>
+            An efficient Calorie tracker which tracks the calories intake and burn effectively
+            <button>
+                See more
+            </button>
+        </p>
+    </div>
+</div>
+</a>
+
+<a href="/report">
+<div class="card1">
+    <h1>Health is the fi</h1>
+    <img src="https://www.projectmanager.com/wp-content/uploads/2021/04/210413_Blog_Feature_Progress_Report-scaled.jpg" alt="">
+    <div class="con-text">
+        <h2 id="h">
+            Progress Report!
+        </h2>
+        <p id="p">
+            A page that displays current progress report of user
+            <button>
+                See more
+            </button>
+        </p>
+    </div>
+</div>
+</a>
+
+<a href="/community">
+<div class="card2">
+<ul class="ul">
+    <li>
+        <i class="bx bx-drink"></i>
+    </li>
+    <li>
+        <i class="bx bx-film"></i>
+    </li>
+    <li>
+        <i class="bx bx-store-alt"></i>
+    </li>
+    <li>
+        <i class="bx bx-map"></i>
+    </li>
+</ul>
+<img src="https://y26uq11r8xr1zyp0d3inciqv-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/40-1-1024x597.jpg" alt="">
+<div class="con-text">
+    <h2 id="h1">
+        Healthstagram!
+    </h2>
+    <p id="p1">
+        A community of like minded people who motivate each other to gain confidence and proceed towards a healthy lifestyle
+        <button>
+            See more
+        </button>
+    </p>
+</div>
+</div>
+</a>
+
+<a href="/updateProfile">
+<div class="card3">
+<ul class="ul">
+</ul>
+<img src="https://cdn4.vectorstock.com/i/1000x1000/36/08/update-female-profile-vector-12503608.jpg" alt="">
+<div class="con-text">
+    <h2 id="h1">
+        Update Profile
+    </h2>
+    <p id="p1">
+       Update your current credentials to improve the timeness of the app
+        <button>
+            See more
+        </button>
+    </p>
+</div>
+</div>
+</a>
+
+<a href="/keepMeUpdated">
+<div class="card4">
+
+<img src="https://img.freepik.com/free-vector/blogging-fun-content-creation-online-streaming-video-blog-young-girl-making-selfie-social-network-sharing-feedback-self-promotion-strategy-vector-isolated-concept-metaphor-illustration_335657-855.jpg?w=2000" alt="">
+<div class="con-text">
+    <h2 id>
+        Keep Me Updated Blog!
+    </h2>
+    <p id>
+       a beautiful blog page which interacts with users and displays the trneding diets, workouts
+        <button>
+            See more
+        </button>
+    </p>
+</div>
+</div>
+</a>
+
+<!--promotion-->
+<div class="w3-row w3-center w3-dark-grey w3-padding-small">
+  <!-- <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Projects Done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Meetings
+  </div> -->
+</div>
+
+
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT </h3>
+    <p class="w3-center"><em>THE BEST NEW GEN HEALTH WEBSITE/em></p>
+    <p>This website is a boon in the medical world. With an accurate calorie tracker, a supportive motivational Community, a beautiful Daily Progress page and updated pretty blogs</p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+  </footer>
+ 
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,744 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+body, html {
+  height: 100%;
+  background-color:#e8cca169;
+  color: rgb(3, 79, 109);
+  line-height: 1.8;
+}
+
+.w3-bar{
+  color:white;
+}
+
+.w3-center w3-padding-large w3-white w3-xlarge w3-wide w3-animate-opacity w3-opacity-min {
+  background:rgba(255, 255, 255, 0.5);
+  padding:100%;
+  opacity: 0.4;
+
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image:url(https://intermountainhealthcare.org/-/media/images/modules/blog/posts/2019/02/which-will-help-you-lose-weight-faster.jpg?mw=1600) ;
+  min-height: 180%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url();
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url();
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+
+/* CARD CSS*/
+.card{
+  width: 300px;
+  height: 400px;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+  top:45%;
+  left:20%;
+
+}
+.card:hover{
+  transform: scale(.9);
+}
+.card:hover:after{
+  height: 280px;
+}
+.card:hover .con-text p{
+  margin-bottom: 0px;
+  opacity: 1;
+}
+.card:hover img{
+  transform: scale(1.25);
+}
+.card:hover .ul{
+  transform: translate(0);
+  opacity: 1;
+}
+.card::after {
+  width: 100%;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  height: 150px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  z-index: 20;
+  transition: all .25s ease;
+}
+.card img{
+  height: 100%;
+  z-index: 10;
+  transition: all .25s ease;
+}
+
+.card .con-text{
+  z-index: 30;
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+.card .con-text p{
+  font-size: .8rem;
+  opacity: 0;
+  margin-bottom: -100px;
+  transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.card .con-text p button{
+  padding: 7px 17px;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .75rem;
+  outline: none;
+}
+.card .con-text p button:hover{
+
+  background: #fff;
+  color: #000;
+}
+
+.ul{
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 40;
+  border-radius: 14px;
+  padding-left: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  top: 0px;
+  opacity: 0;
+  transform: translate(100%);
+  transition: all .25s ease;
+}
+.ul li{
+  background: #fff;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+}
+.ul li:last-child{
+  border-radius: 0px 0px 12px 12px;
+}
+.ul li:first-child{
+  border-radius: 12px 12px 0px 0px;
+}
+.ul li:hover{
+  opacity: 1;
+  transform: translate(-7px, -4px);
+  border-radius: 6px;
+}
+.ul li i{
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.card1{
+  width: 300px;
+  height: 400px;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+  left:20%;
+  top:100%;
+ 
+ 
+
+}
+.card1:hover{
+  transform: scale(.9);
+}
+.card1:hover:after{
+  height: 280px;
+}
+.card1:hover .con-text p{
+  margin-bottom: 0px;
+  opacity: 1;
+}
+.card1:hover img{
+  transform: scale(1.25);
+}
+.card1:hover .ul{
+  transform: translate(0);
+  opacity: 1;
+}
+.card1::after {
+  width: 100%;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  height: 150px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  z-index: 20;
+  transition: all .25s ease;
+}
+.card1 img{
+  height: 100%;
+  z-index: 10;
+  transition: all .25s ease;
+}
+
+.card1 .con-text{
+  z-index: 30;
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+.card1 .con-text p {
+  font-size: .8rem;
+  opacity: 0;
+  margin-bottom: -100px;
+  transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.card1 .con-text p  button {
+  padding: 7px 17px;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .75rem;
+  outline: none;
+}
+.card1 .con-text p  button:hover {
+
+  background: #fff;
+  color: #000;
+}
+
+.ul{
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 40;
+  border-radius: 14px;
+  padding-left: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  top: 0px;
+  opacity: 0;
+  transform: translate(100%);
+  transition: all .25s ease;
+}
+.ul li{
+  background: #fff;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+}
+.ul li:last-child{
+  border-radius: 0px 0px 12px 12px;
+}
+.ul li:first-child{
+  border-radius: 12px 12px 0px 0px;
+}
+.ul li:hover{
+  opacity: 1;
+  transform: translate(-7px, -4px);
+  border-radius: 6px;
+}
+.ul li i{
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.card2{
+  width: 300px;
+  height: 400px;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+  left:60%;
+  bottom:59.5%;
+
+}
+.card2:hover{
+  transform: scale(.9);
+}
+.card2:hover:after{
+  height: 280px;
+}
+.card2:hover .con-text p{
+  margin-bottom: 0px;
+  opacity: 1;
+}
+.card2:hover img{
+  transform: scale(1.25);
+}
+.card2:hover .ul{
+  transform: translate(0);
+  opacity: 1;
+}
+.card2::after {
+  width: 100%;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  height: 150px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  z-index: 20;
+  transition: all .25s ease;
+}
+.card2 img{
+  height: 100%;
+  z-index: 10;
+  transition: all .25s ease;
+}
+
+.card2 .con-text{
+  z-index: 30;
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+.card2 .con-text p {
+  font-size: .8rem;
+  opacity: 0;
+  margin-bottom: -100px;
+  transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.card2 .con-text p  button {
+  padding: 7px 17px;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .75rem;
+  outline: none;
+}
+.card2 .con-text p  button:hover {
+
+  background: #fff;
+  color: #000;
+}
+
+.ul{
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 40;
+  border-radius: 14px;
+  padding-left: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  top: 0px;
+  opacity: 0;
+  transform: translate(100%);
+  transition: all .25s ease;
+}
+.ul li{
+  background: #fff;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+}
+.ul li:last-child{
+  border-radius: 0px 0px 12px 12px;
+}
+.ul li:first-child{
+  border-radius: 12px 12px 0px 0px;
+}
+.ul li:hover{
+  opacity: 1;
+  transform: translate(-7px, -4px);
+  border-radius: 6px;
+}
+.ul li i{
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.card3{
+  width: 300px;
+  height: 400px;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+ 
+  left:60%;
+  bottom:4.5%;
+  
+
+}
+.card3:hover{
+  transform: scale(.9);
+}
+.card3:hover:after{
+  height: 280px;
+}
+.card3:hover .con-text p{
+  margin-bottom: 0px;
+  opacity: 1;
+}
+.card3:hover img{
+  transform: scale(1.25);
+}
+.card3:hover .ul{
+  transform: translate(0);
+  opacity: 1;
+}
+.card3::after {
+  width: 100%;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  height: 150px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  z-index: 20;
+  transition: all .25s ease;
+}
+.card3 img{
+  height: 100%;
+  z-index: 10;
+  transition: all .25s ease;
+}
+
+.card3 .con-text{
+  z-index: 30;
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+.card3 .con-text p {
+  font-size: .8rem;
+  opacity: 0;
+  margin-bottom: -100px;
+  transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.card3 .con-text p  button {
+  padding: 7px 17px;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .75rem;
+  outline: none;
+  
+}
+.card3 .con-text p  button:hover {
+
+  background: #fff;
+  color: #000;
+}
+
+.ul{
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 40;
+  border-radius: 14px;
+  padding-left: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  top: 0px;
+  opacity: 0;
+  transform: translate(100%);
+  transition: all .25s ease;
+}
+.ul li{
+  background: #fff;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+}
+.ul li:last-child{
+  border-radius: 0px 0px 12px 12px;
+}
+.ul li:first-child{
+  border-radius: 12px 12px 0px 0px;
+}
+.ul li:hover{
+  opacity: 1;
+  transform: translate(-7px, -4px);
+  border-radius: 6px;
+}
+.ul li i{
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.card4{
+  width: 300px;
+  height: 400px;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+  left:40%;
+  bottom:110%
+
+  
+
+}
+.card4:hover{
+  transform: scale(.9);
+}
+.card4:hover:after{
+  height: 280px;
+}
+.card4:hover .con-text p{
+  margin-bottom: 0px;
+  opacity: 1;
+}
+.card4:hover img{
+  transform: scale(1.25);
+}
+.card4:hover .ul{
+  transform: translate(0);
+  opacity: 1;
+}
+.card4::after {
+  width: 100%;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  height: 150px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  z-index: 20;
+  transition: all .25s ease;
+}
+.card4 img{
+  height: 100%;
+  z-index: 10;
+  transition: all .25s ease;
+}
+
+.card4 .con-text{
+  z-index: 30;
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+.card4 .con-text p {
+  font-size: .8rem;
+  opacity: 0;
+  margin-bottom: -100px;
+  transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.card4 .con-text p  button {
+  padding: 7px 17px;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .75rem;
+  outline: none;
+  
+}
+.card4 .con-text p  button:hover {
+
+  background: #fff;
+  color: #000;
+}
+
+.ul{
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 40;
+  border-radius: 14px;
+  padding-left: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  top: 0px;
+  opacity: 0;
+  transform: translate(100%);
+  transition: all .25s ease;
+}
+.ul li{
+  background: #fff;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .7;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+}
+.ul li:last-child{
+  border-radius: 0px 0px 12px 12px;
+}
+.ul li:first-child{
+  border-radius: 12px 12px 0px 0px;
+}
+.ul li:hover{
+  opacity: 1;
+  transform: translate(-7px, -4px);
+  border-radius: 6px;
+}
+.ul li i{
+  font-size: 1.4rem;
+  color: #000;
+}
+
+#homw{
+    height: 2000px;
+}

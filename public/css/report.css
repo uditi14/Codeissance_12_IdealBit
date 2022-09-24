@@ -1,0 +1,19 @@
+.table{
+    height: 50%;
+    width:50%;
+}
+
+.graph{
+    top:30%;
+    left:10%;
+}
+.fooddistri{
+    
+margin-right: 0px;
+height: 40%;
+width:40%;
+}
+
+body{
+    padding: 0px 350px;
+}
