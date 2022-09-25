@@ -55,9 +55,9 @@ function myFunction(id) {
   
       let content = `      
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-      <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <img src="https://image.shutterstock.com/image-vector/user-login-authenticate-icon-human-260nw-1365533969.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:70px;height:70;">
       <span class="w3-right w3-opacity">1 min</span>
-      <h4>John Doe</h4><br>
+      <h4>Yash</h4><br>
       <hr class="w3-clear">
       <p>${text}</p>
         
@@ -113,7 +113,6 @@ function myFunction(id) {
       commentsObj.forEach(obj => {
           if (obj.id == id) {
               console.log(document.getElementById(id1).value);
-              console.log('edf');
   
               obj.comments.push(document.getElementById(id1).value)
               console.log(obj.comments);
@@ -132,7 +131,7 @@ function myFunction(id) {
           if (obj.id == id) {
               console.log("hhh");
               obj.comments.forEach(comment=>{
-                  commhtml += `<div>${comment}</div>`
+                  commhtml += `<div style={background-color: lightgray; border-radius: 12px;}>${comment}</div>`
               })
   
               commentBox.innerHTML =  `

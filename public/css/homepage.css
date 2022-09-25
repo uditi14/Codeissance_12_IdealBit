@@ -739,6 +739,22 @@ body, html {
   color: #000;
 }
 
-#homw{
-    height: 2000px;
+#home{
+    /* height: 2000px; */
+}
+
+.card{
+  margin:0;
+  padding: 0;
+  /* padding-left: 120px; */
+  margin: 0px 22px;
+}
+
+.super{
+  display:flex;
+  margin-bottom: 300px;
+}
+
+*{
+  
 }

@@ -79,7 +79,7 @@ app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-  res.render('index.ejs',{name:currentUser.fullname})
+  res.render('index.ejs',)
 })
 
 app.get('/login', (req, res) => {
@@ -93,6 +93,7 @@ app.post('/login', (req,res) =>{
 
   }
   else if (user.password == req.body.password) {
+    currentUser = user
     res.redirect('/')
   }
   else {
@@ -134,15 +135,19 @@ app.post('/details', (req,res) => {
     weight: Number(req.body.weight),
     height: Number(req.body.height),
     targetWeight: Number(req.body.targetWeight),
-    gender: req.body.gender,
-    bmi: Number(req.body.BMI)
+    bmi: calBmi(Number(req.body.weight),Number(req.body.height))
   }
 
   createUser(user).catch(console.error)
+  currentUser = user
 
   console.log(user)
   res.redirect('/login')
 })
+
+function calBmi(weight, height) {
+  return 10000*(weight/(height*height))
+}
 
 app.get('/keepMeUpdated', (req,res) => {
   res.render('keepMeUpdated.ejs')
@@ -187,12 +192,13 @@ async function update(client,updatedUser) {
 
 app.get('/updateProfile', (req,res) =>{
   console.log(currentUser);
+
   res.render('updateProfile.ejs', {
     fullname:currentUser.fullname,
     age:currentUser.age,
     weight: currentUser.weight,
     height: currentUser.height,
-    BMI:currentUser.BMI,
+    BMI:currentUser.bmi,
     targetWeight:currentUser.targetWeight,
 
   })
@@ -201,7 +207,6 @@ app.get('/updateProfile', (req,res) =>{
 
 app.post('/updateProfile',async (req,res) => {
     updatedUser = {
-      // _id:"asjdkj",
       name: req.body.name,
       email: req.body.email,
       password: req.body.password,
@@ -210,7 +215,6 @@ app.post('/updateProfile',async (req,res) => {
     weight: Number(req.body.weight),
     height: Number(req.body.height),
     targetWeight: Number(req.body.targetWeight),
-    gender: req.body.gender.value,
     bmi: Number(req.body.BMI) 
     }
 

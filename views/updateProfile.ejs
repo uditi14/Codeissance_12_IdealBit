@@ -37,31 +37,15 @@
               </div>
               <div class="input-box">
                 <span class="details">BMI</span>
-                <label id="bmi" name = "BMI"> Your BMI: <%=locals.fullname || " "  %></label>
+                <label id="bmi" name = "BMI"> Your BMI: <%=locals.BMI || " "  %></label>
               </div>
             </div>
-            <div class="gender-details">
-              <input type="radio" name="gender" value="male" id="dot-1">
-              <input type="radio" name="gender" value="female" id="dot-2">
-              <input type="radio" name="gender" value="null" id="dot-3">
-              <span class="gender-title">Gender</span>
-              <div class="category">
-                <label for="dot-1">
-                <span class="dot one"></span>
-                <span class="gender">Male</span>
-              </label>
-              <label for="dot-2">
-                <span class="dot two"></span>
-                <span class="gender">Female</span>
-              </label>
-              <label for="dot-3">
-                <span class="dot three"></span>
-                <span class="gender">Prefer not to say</span>
-                </label>
+            
               </div>
             </div>
-            <div class="button">
-              <input type="submit" value="Update">
+            <div class="button" style="z-index: 500;">
+              <input type="submit" value="Update" style="margin-left:500px;margin-top:100px">
+              <a href="/"><button>go back</button></a>
             </div>
           </form>
       </div>
